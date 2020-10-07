@@ -6,9 +6,11 @@ public class Calculator {
         Scanner inputUser = new Scanner(System.in);
 
         float firstNumber, secondNumber;
-        String operator;
+        String operator, confirmation;
 
-        while(0 != 1) {
+        confirmation = "YES";
+
+        while(confirmation.equals("YES")) {
 
         System.out.print("Input First Number: ");
         firstNumber = inputUser.nextFloat();
@@ -27,15 +29,23 @@ public class Calculator {
 
         if(operator.equals("+")) {
              System.out.println("result: " + addition);
+             System.out.println("Try again?\n(TYPE 'YES')");
+             confirmation = inputUser.next();
         } else {
             if(operator.equals("-")) {
                 System.out.println("result: " + subtraction);
+                System.out.println("Try again?\n(TYPE 'YES')");
+                confirmation = inputUser.next();
             } else {
                 if(operator.equals("x")) {
                     System.out.println("result: " + multiplication);
+                    System.out.println("Try again?\n(TYPE 'YES')");
+                    confirmation = inputUser.next();
                 } else {
                     if(operator.equals("/")) {
                         System.out.println("result: " + division);
+                        System.out.println("Try again?\n(TYPE 'YES')");
+                        confirmation = inputUser.next();
                     } else {
                         System.out.println("Operator is error");
                     }
