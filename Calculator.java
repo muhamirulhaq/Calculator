@@ -12,7 +12,7 @@ public class Calculator {
 
         while(confirmation.equals("YES")) {
 
-        System.out.print("Input First Number: ");
+        System.out.print("\nInput First Number: ");
         firstNumber = inputUser.nextFloat();
 
         System.out.print("Input Operator: ");
@@ -28,26 +28,26 @@ public class Calculator {
         division = firstNumber / secondNumber;
 
         if(operator.equals("+")) {
-             System.out.println("result: " + addition);
-             System.out.println("Try again?\n(TYPE 'YES')");
+             System.out.println("\nresult: " + addition);
+             System.out.println("\nTry again? (TYPE 'YES')");
              confirmation = inputUser.next();
         } else {
             if(operator.equals("-")) {
-                System.out.println("result: " + subtraction);
-                System.out.println("Try again?\n(TYPE 'YES')");
+                System.out.println("\nresult: " + subtraction);
+                System.out.println("\nTry again? (TYPE 'YES')");
                 confirmation = inputUser.next();
             } else {
                 if(operator.equals("x")) {
-                    System.out.println("result: " + multiplication);
-                    System.out.println("Try again?\n(TYPE 'YES')");
+                    System.out.println("\nresult: " + multiplication);
+                    System.out.println("\nTry again? (TYPE 'YES')");
                     confirmation = inputUser.next();
                 } else {
                     if(operator.equals("/")) {
-                        System.out.println("result: " + division);
-                        System.out.println("Try again?\n(TYPE 'YES')");
+                        System.out.println("\nresult: " + division);
+                        System.out.println("\nTry again? (TYPE 'YES')");
                         confirmation = inputUser.next();
                     } else {
-                        System.out.println("Operator is error");
+                        System.out.println("\nOperator is error");
                     }
                 }
             }
@@ -55,3 +55,4 @@ public class Calculator {
         }
     }
 }
+
