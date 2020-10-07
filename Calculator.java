@@ -7,8 +7,14 @@ public class Calculator {
 
         float firstNumber, secondNumber;
         String operator;
+
+        System.out.print("Input First Number: ");
         firstNumber = inputUser.nextFloat();
+
+        System.out.print("Input Operator: ");
         operator = inputUser.next();
+        
+        System.out.print("Input Second Number: ");
         secondNumber = inputUser.nextFloat();
 
         float addition, subtraction, multiplication, division;
@@ -20,7 +26,19 @@ public class Calculator {
         if(operator.equals("+")) {
              System.out.println("result: " + addition);
         } else {
-            System.out.println("operator is not addition");
+            if(operator.equals("-")) {
+                System.out.println("result: " + subtraction);
+            } else {
+                if(operator.equals("x")) {
+                    System.out.println("result: " + multiplication);
+                } else {
+                    if(operator.equals("/")) {
+                        System.out.println("result: " + division);
+                    } else {
+                        System.out.println("Operator is error");
+                    }
+                }
+            }
         }
     }
 }
