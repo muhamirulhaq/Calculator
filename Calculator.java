@@ -8,12 +8,14 @@ public class Calculator {
         float firstNumber, secondNumber;
         String operator;
 
+        while(0 != 1) {
+
         System.out.print("Input First Number: ");
         firstNumber = inputUser.nextFloat();
 
         System.out.print("Input Operator: ");
         operator = inputUser.next();
-        
+
         System.out.print("Input Second Number: ");
         secondNumber = inputUser.nextFloat();
 
@@ -39,6 +41,7 @@ public class Calculator {
                     }
                 }
             }
+        }
         }
     }
 }
