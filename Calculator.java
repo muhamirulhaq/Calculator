@@ -1,11 +1,15 @@
+import java.util.Scanner;
+
 public class Calculator {
     public static void main(String[] args) {
 
+        Scanner inputUser = new Scanner(System.in);
+
         float firstNumber, secondNumber;
         String operator;
-        firstNumber = 1;
-        operator = "+";
-        secondNumber = 2;
+        firstNumber = inputUser.nextFloat();
+        operator = inputUser.next();
+        secondNumber = inputUser.nextFloat();
 
         float addition, subtraction, multiplication, division;
         addition = firstNumber + secondNumber;
@@ -13,7 +17,10 @@ public class Calculator {
         multiplication = firstNumber * secondNumber;
         division = firstNumber / secondNumber;
 
-        System.out.println("result: " + addition);
-
+        if(operator.equals("+")) {
+             System.out.println("result: " + addition);
+        } else {
+            System.out.println("operator is not addition");
+        }
     }
 }
