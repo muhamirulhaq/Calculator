@@ -52,7 +52,8 @@ public class Calculator {
                 }
             }
         }
-        }
+        } 
+        inputUser.close();
     }
 }
 
