@@ -31,9 +31,13 @@ public class Calculator {
     public static float exponent(float a, float b) {
         float c = a;
         float i = 1;
-        while(i < b) {
-            c = c * a;
-            i++;
+        if(b == 0) {
+            c = 1;
+        } else {
+           while(i < b) {
+               c = c * a;
+               i++;
+           }
         }
         return c;
     }
