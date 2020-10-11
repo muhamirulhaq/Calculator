@@ -1,6 +1,27 @@
 import java.util.Scanner;
 
 public class Calculator {
+
+    public static float addition(float a, float b) {
+        float c = a + b;
+        return c;
+    }
+
+    public static float subtraction(float a, float b) {
+        float c = a - b;
+        return c;
+    }
+
+    public static float multiplication(float a, float b) {
+        float c = a * b;
+        return c;
+    }
+
+    public static float division(float a, float b) {
+        float c = a / b;
+        return c;
+    }
+
     public static void main(String[] args) {
 
         Scanner inputUser = new Scanner(System.in);
@@ -21,29 +42,29 @@ public class Calculator {
         System.out.print("Input Second Number: ");
         secondNumber = inputUser.nextFloat();
 
-        float addition, subtraction, multiplication, division;
-        addition = firstNumber + secondNumber;
-        subtraction = firstNumber - secondNumber;
-        multiplication = firstNumber * secondNumber;
-        division = firstNumber / secondNumber;
+        float additionIs, subtractionIs, multiplicationIs, divisionIs;
+        additionIs = addition(firstNumber, secondNumber);
+        subtractionIs = subtraction(firstNumber, secondNumber);
+        multiplicationIs = multiplication(firstNumber, secondNumber);
+        divisionIs = division(firstNumber, secondNumber);
 
         if(operator.equals("+")) {
-             System.out.println("\nresult: " + addition);
+             System.out.println("\nresult: " + additionIs);
              System.out.println("\nTry again? (TYPE 'YES')");
              confirmation = inputUser.next();
         } else {
             if(operator.equals("-")) {
-                System.out.println("\nresult: " + subtraction);
+                System.out.println("\nresult: " + subtractionIs);
                 System.out.println("\nTry again? (TYPE 'YES')");
                 confirmation = inputUser.next();
             } else {
                 if(operator.equals("x")) {
-                    System.out.println("\nresult: " + multiplication);
+                    System.out.println("\nresult: " + multiplicationIs);
                     System.out.println("\nTry again? (TYPE 'YES')");
                     confirmation = inputUser.next();
                 } else {
                     if(operator.equals("/")) {
-                        System.out.println("\nresult: " + division);
+                        System.out.println("\nresult: " + divisionIs);
                         System.out.println("\nTry again? (TYPE 'YES')");
                         confirmation = inputUser.next();
                     } else {
@@ -56,4 +77,3 @@ public class Calculator {
         inputUser.close();
     }
 }
-
