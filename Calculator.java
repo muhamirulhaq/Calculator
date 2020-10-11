@@ -1,3 +1,9 @@
+// Operator of addition is "+";
+// Operator of subtraction is "-";
+// Operator of multiplication is "x";
+// Operator of division is "/";
+// Operator of exponent is "^";
+
 import java.util.Scanner;
 
 public class Calculator {
@@ -22,6 +28,16 @@ public class Calculator {
         return c;
     }
 
+    public static float exponent(float a, float b) {
+        float c = a;
+        float i = 1;
+        while(i < b) {
+            c = c * a;
+            i++;
+        }
+        return c;
+    }
+
     public static void main(String[] args) {
 
         Scanner inputUser = new Scanner(System.in);
@@ -42,11 +58,12 @@ public class Calculator {
         System.out.print("Input Second Number: ");
         secondNumber = inputUser.nextFloat();
 
-        float additionIs, subtractionIs, multiplicationIs, divisionIs;
+        float additionIs, subtractionIs, multiplicationIs, divisionIs, exponentIs;
         additionIs = addition(firstNumber, secondNumber);
         subtractionIs = subtraction(firstNumber, secondNumber);
         multiplicationIs = multiplication(firstNumber, secondNumber);
         divisionIs = division(firstNumber, secondNumber);
+        exponentIs = exponent(firstNumber, secondNumber);
 
         if(operator.equals("+")) {
              System.out.println("\nresult: " + additionIs);
@@ -68,7 +85,13 @@ public class Calculator {
                         System.out.println("\nTry again? (TYPE 'YES')");
                         confirmation = inputUser.next();
                     } else {
+                        if(operator.equals("^")) {
+                            System.out.println("result: " + exponentIs);
+                            System.out.println("\nTry again? (TYPE 'YES')");
+                            confirmation = inputUser.next();
+                        } else {
                         System.out.println("\nOperator is error");
+                        }
                     }
                 }
             }
